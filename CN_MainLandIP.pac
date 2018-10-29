@@ -8354,5 +8354,6 @@ function FindProxyForURL(url, host) {
     return 'DIRECT';
   } else {
     return 'SOCKS5 127.0.0.1:1080';
+    
   }
 }
