@@ -1,4 +1,4 @@
-# CN_MainlandIP PAC
+# CN MainlandIP PAC
 
 This is the PAC of most IP in mainland China.
 
