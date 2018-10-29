@@ -12,11 +12,11 @@ At first create a new profiles.
 
 ![Create_New](https://s1.ax1x.com/2018/10/29/i2dOud.png "New1")
 
-Select poc profiles and enter a name.
+Select pac profiles and enter a name.
 
 ![Create_New](https://s1.ax1x.com/2018/10/29/i2wkuj.png "New2")
 
-Enter a URL of PAC and update.
+Enter the URL of PAC and update.
 
 ![Enter](https://s1.ax1x.com/2018/10/29/i2wM2F.png "New3")
 
