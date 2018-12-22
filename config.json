@@ -1,0 +1,100 @@
+{
+ "routing": {
+  "domainStrategy": "IPIfNonMatch",
+  "rules": [
+   {
+    "type": "field",
+    "ip": [
+     "geoip:private"
+    ],
+    "outboundTag": "direct"
+   },
+   {
+    "domain": [
+     "geosite:cn"
+    ],
+    "type": "field",
+    "outboundTag": "direct"
+   },
+   {
+    "domain": [
+     "geoip:cn"
+    ],
+    "type": "field",
+    "outboundTag": "direct"
+   }
+  ]
+ },
+ "log": {
+  "access": "",
+  "loglevel": "info",
+  "error": ""
+ },
+ "outbounds": [
+  {
+   "protocol": "vmess",
+   "streamSettings": {
+    "kcpSettings": {},
+    "tcpSettings": {},
+    "wsSettings": {},
+    "tlsSettings": {},
+    "security": "none",
+    "network": "quic",
+    "httpSettings": {},
+    "quicSettings": {
+     "header": {
+      "type": "srtp"
+     },
+     "key": "xP0HcmwS",
+     "security": "chacha20-poly1305"
+    }
+   },
+   "settings": {
+    "vnext": [
+     {
+      "port": 65430,
+      "address": "103.214.147.22",
+      "users": [
+       {
+        "alterId": 16,
+        "id": "8e610d66-ff8a-11e8-bd6e-005056852855",
+        "security": "aes-128-gcm"
+       }
+      ]
+     }
+    ]
+   },
+   "mux": {
+    "enabled": true
+   }
+  },
+  {
+   "tag": "direct",
+   "protocol": "freedom",
+   "settings": {
+    "response": null
+   }
+  }
+ ],
+ "inbounds": [
+  {
+   "port": 1080,
+   "protocol": "socks",
+   "streamSettings": null,
+   "settings": {
+    "ip": "127.0.0.1",
+    "udp": true,
+    "auth": "noauth",
+    "clients": null
+   },
+   "listen": "0.0.0.0"
+  }
+ ],
+ "dns": {
+  "servers": [
+   "8.8.8.8",
+   "8.8.4.4",
+   "localhost"
+  ]
+ }
+}
